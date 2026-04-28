@@ -1,8 +1,14 @@
 alunos = int(input("Informe a quantidade de alunos: "))
 notas = []
 for i in range(alunos):
-    nota = int(input(f"Digite a nota do aluno {i+1}: "))
-    notas.append(nota)
+
+    while True:
+        nota = int(input(f"Digite a nota do aluno {i+1}: "))
+        if 0 <= nota <= 10:
+            notas.append(nota)
+            break
+        else:
+            print("Nota inválida. Digite uma nota entre 0 e 10.")
 
 abaixo_media = sum(1 for n in notas if n < 6)
 na_media = sum(1 for n in notas if n >= 6)
