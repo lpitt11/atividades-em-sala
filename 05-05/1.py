@@ -12,8 +12,6 @@ for i in range(1, quantidade_de_numeros):
         esta_repetindo = True
     else:
         esta_repetindo = False
-        numero_repetindo = 0
-        quantidade_de_repeticao = 0
 
 if esta_repetindo:
     print(f"Existe sequência de números iguais consecutivos? {True}")
